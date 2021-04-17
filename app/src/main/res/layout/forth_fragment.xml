@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListView
+        android:id="@+id/tasksLV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFEEDD"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/monthsRV"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/monthsRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tasksLV"
+        app:layout_constraintBottom_toTopOf="@id/inputET"/>
+
+    <EditText
+        android:id="@+id/inputET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/monthsRV"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

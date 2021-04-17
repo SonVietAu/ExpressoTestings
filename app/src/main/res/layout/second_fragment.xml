@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <ListView
+        android:id="@+id/tasksLV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/openFloatingContextMenuBtn"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:text="Long Press 4 Floating Context Menu"
+        android:textSize="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tasksLV" />
+
+    <Button
+        android:id="@+id/openActionModeContextMenuBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Long Press 4 Action Mode Context Menu"
+        app:layout_constraintTop_toBottomOf="@id/openFloatingContextMenuBtn" />
+
+    <TextView
+        android:id="@+id/menuResultTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Menu Item pressed"
+        app:layout_constraintTop_toBottomOf="@id/openActionModeContextMenuBtn" />
+
+    <Button
+        android:id="@+id/showHideBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Show/Hide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/showHideResultTV"
+        app:layout_constraintTop_toBottomOf="@id/menuResultTV"/>
+
+    <TextView
+        android:id="@+id/showHideResultTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Showing"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/showHideBtn"
+        app:layout_constraintTop_toBottomOf="@id/menuResultTV"
+        app:layout_constraintBottom_toBottomOf="@id/showHideBtn"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SecondFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
